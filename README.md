@@ -17,7 +17,7 @@ Create a new branch named *interview/yourfirstname-yourlastname* from master. Ne
 Your mission is to create a new page.
 On this page, you will show a title and a form to create a post and its metadata.
 The goal is to submit the form and save in database a new post with name and content and a metadata witj key  'mymeta' and its value.
-See the mockup : 
+See the mockup : https://github.com/simplifia/simpli-wp-test-interview/blob/main/mockup.PNG
 
 ### Contribution guidelines ###
 When you start working, please push an initial commit.  
