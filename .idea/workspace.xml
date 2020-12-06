@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:interview" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="173fb01b-ec02-4412-8619-fa17014b65a1" name="Default Changelist" comment="final" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/interview/Ahmed-Hachicha" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="SIMPLIFIA &lt;jb.vercruysse@simplifia.fr&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lIfwuJtb0x5yQwrFCGQgMwSK2f" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="173fb01b-ec02-4412-8619-fa17014b65a1" name="Default Changelist" comment="" />
+      <created>1607289767966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607289767966</updated>
+      <workItem from="1607289769062" duration="1678000" />
+    </task>
+    <task id="LOCAL-00001" summary="final">
+      <created>1607292052095</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607292052095</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Deployment" timestamp="1607292396418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Deployment/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607292396418" />
+    <state x="520" y="236" key="#Notifications" timestamp="1607292418727">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="236" key="#Notifications/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607292418727" />
+    <state x="278" y="188" key="Vcs.Push.Dialog.v2" timestamp="1607292439100">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="278" y="188" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607292439100" />
+    <state x="2152" y="225" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607292064959" />
+    <state x="2376" y="226" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1607292027925">
+      <screen x="1920" y="0" width="1280" height="984" />
+    </state>
+    <state x="2376" y="226" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607292027925" />
+    <state x="548" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607292405641">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607292405641" />
+    <state x="2377" y="406" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607289785937" />
+  </component>
+</project>
