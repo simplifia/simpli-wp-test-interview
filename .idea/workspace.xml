@@ -25,7 +25,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="173fb01b-ec02-4412-8619-fa17014b65a1" name="Default Changelist" comment="final" />
+    <list default="true" id="173fb01b-ec02-4412-8619-fa17014b65a1" name="Default Changelist" comment="final">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +70,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/simpli-php-test-interview" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -79,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607289767966</updated>
-      <workItem from="1607289769062" duration="1678000" />
+      <workItem from="1607289769062" duration="3733000" />
     </task>
     <task id="LOCAL-00001" summary="final">
       <created>1607292052095</created>
@@ -118,10 +121,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="236" key="#Notifications/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607292418727" />
-    <state x="278" y="188" key="Vcs.Push.Dialog.v2" timestamp="1607292439100">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607296514801">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="278" y="188" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607292439100" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607296514801" />
+    <state x="278" y="188" key="Vcs.Push.Dialog.v2" timestamp="1607295162372">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="278" y="188" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607295162372" />
     <state x="2152" y="225" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607292064959" />
     <state x="2376" y="226" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1607292027925">
       <screen x="1920" y="0" width="1280" height="984" />
