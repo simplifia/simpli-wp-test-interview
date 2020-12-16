@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: benoit
+ * User: mayssa
  * Date: 09/05/18
  * Time: 09:28
  */
@@ -9,49 +9,25 @@ namespace SimpliCeremonyStreamingPlugin\Models;
 
 
 class View {
-    private $fileName;
-    private $requiredDatas;
+    private $postname;
+    private $contentname;
+    private $metadata;
 
     /**
      * View constructor.
      *
-     * @param $fileName
-     * @param $data
+     * @param $postname
+     * @param $contentname
+     * @param $metadata
      */
-    public function __construct($fileName, $requiredDatas){
-        $this->fileName = $fileName;
-        $this->requiredDatas = $requiredDatas;
+    public function __construct($postname, $contentname,$metadata){
+        $this->postname = $postname;
+        $this->contentname = $contentname;
+        $this->metadata = $metadata;
 
     }
 
-    public function Render($datas){
-        if($this->VerifyRequiredField($datas)){
-            foreach ($datas as $key => $data){
-                $$key = $data;
-            }
-
-            include $this->fileName;
-        }
-    }
-
-    public function VerifyRequiredField($datas){
-
-        try{
-            foreach ($this->requiredDatas as $requiredData){
-                if( ! in_array($requiredData, array_keys($datas))){
-                    throw new RequiredDataException();
-                }
-            }
-
-            return true;
-        } catch(RequiredDataException $e){
-            error_log($e);
-            exit();
-        }
-    }
-
-    public function GetViewName(){
-        return $this->fileName;
-    }
+    
+ 
 
 }
