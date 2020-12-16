@@ -61,7 +61,7 @@ textarea {
 button {
   /* Cette marge supplémentaire représente grosso modo le même espace que celui
      entre les étiquettes et les champs texte */
-  margin-left: .5em;
+  margin-left: .6em;
 }
 </style>
 <body>
