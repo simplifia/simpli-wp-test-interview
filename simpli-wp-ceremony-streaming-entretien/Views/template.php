@@ -65,7 +65,7 @@ button {
 }
 </style>
 <body>
-<form action="/action.php" method="post">
+<form action="../Builders/connexion.php" method="post">
    <p>Un formulaire pour créer un post et ses metadata</p>
     <div>
         <label for="postname">Post name :</label>
