@@ -17,12 +17,12 @@ class View {
      * View constructor.
      *
      * @param $postname
-     * @param $contentname
+     * @param $postcontent
      * @param $metadata
      */
-    public function __construct($postname, $contentname,$metadata){
+    public function __construct($postname, $postcontent,$metadata){
         $this->postname = $postname;
-        $this->contentname = $contentname;
+        $this->postcontent = $postcontent;
         $this->metadata = $metadata;
 
     }
