@@ -26,6 +26,7 @@ class BroadcastGateway extends Gateway implements IBroadcastGateway {
         if(isset($data['result']['all_docs'][0])){
             $result = $data['result']['all_docs'][0];
         }
+    
         return $result;
     }
 }
