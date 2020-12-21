@@ -13,7 +13,6 @@
             <label for="post-name">Metadata : mymeta</label>
             <input id="post-name" name="post_meta" type="text">
         </div>
-
         <?php submit_button('Submit') ?>
     </form>
 </div>
