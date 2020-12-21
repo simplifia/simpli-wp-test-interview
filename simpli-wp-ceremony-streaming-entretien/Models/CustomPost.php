@@ -18,12 +18,17 @@ class CustomPost
         }
     }
 
+    /**
+     * Save post in wordpress database and add generated id to the object
+     */
     public function save()
     {
+        // insert post
         $this->postId = wp_insert_post(array(
             'post_name' => $this->postMeta,
             'post_content' => $this->postContent
         ));
+        // insert meta for this post
         add_post_meta($this->postId, 'mymeta', $this->postMeta, true);
     }
 }
