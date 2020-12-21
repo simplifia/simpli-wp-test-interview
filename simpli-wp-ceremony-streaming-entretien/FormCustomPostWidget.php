@@ -2,6 +2,8 @@
 
 namespace SimpliCeremonyStreamingPlugin;
 
+use SimpliCeremonyStreamingPlugin\Models\View;
+
 class FormCustomPostWidget
 {
 
@@ -21,6 +23,7 @@ class FormCustomPostWidget
 
     public function form()
     {
-        echo '<h1> Test </h1>';
+        $this->formPostView = new View(plugin_dir_path(__FILE__) . 'Views/FormCustomPostView.php', []);
+        $this->formPostView->Render(array('broadcast' => null));
     }
 }
