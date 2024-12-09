@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: simpli-wp-cerenomy-streaming
-Description: Ceremony streaming
+Plugin Name: simpli-wp-test-interview
+Description: TEST
 Author: Simplifia
 Version: 1.0
 */
@@ -19,6 +19,7 @@ class SimpliCeremonyStreamingPlugin extends Singleton
     {
         include_once plugin_dir_path( __FILE__ ).'/CeremonyStreaming.php';
         new CeremonyStreamingPlugin();
+        register_block_type(plugin_dir_path( __FILE__ ) . '/build/demo');
     }
 
 }

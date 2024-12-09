@@ -3,10 +3,10 @@
 namespace SimpliCeremonyStreamingPlugin;
 
 //This widget dont need to be placed by wordpress so it doesnt extends SimpliWidget
-use SimpliCeremonyStreamingPlugin\Repositorys\AgencyRepository;
-use SimpliCeremonyStreamingPlugin\Repositorys\BroadcastRepository;
+
+
 use SimpliCeremonyStreamingPlugin\Models\View;
-use SimpliCeremonyStreamingPlugin\Helpers\Mobile_Detect;
+use SimpliCeremonyStreamingPlugin\Repositorys\BroadcastRepository;
 
 class CeremonyStreamingWidget
 {
