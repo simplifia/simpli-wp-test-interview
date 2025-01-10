@@ -42,3 +42,8 @@ In the front end when user click on your block, it reverse the text, "Hello Worl
 This feature must be accessible.
 
 Bonus: in the administration users can change the background and the border of your block.
+
+### Contribution guidelines ###
+When you start working, please push an initial commit on a dedicated branch named with your own name and first name.  
+After that, please push at least one commit every 30 minutes.  
+When you are done, please create a Pull Request (https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
