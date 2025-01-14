@@ -156,3 +156,85 @@ if ( ! function_exists( 'twentytwentyfive_format_binding' ) ) :
 		}
 	}
 endif;
+
+add_action('init', function () {
+    if (function_exists('add_shortcode')) {
+        error_log('add_shortcode est disponible.');
+    } else {
+        error_log('add_shortcode n’est PAS disponible.');
+    }
+
+    if (function_exists('wp_insert_post')) {
+        error_log('wp_insert_post est disponible.');
+    } else {
+        error_log('wp_insert_post n’est PAS disponible.');
+    }
+});
+
+// Display form function
+function simpli_render_custom_form() {
+    ob_start();
+    ?>
+    <div class="simpli-custom-form">
+        <form method="post">
+            <h2>My form to create a post and its metadata</h2>
+            <label for="post_title">Post Title</label><br>
+            <input type="text" id="post_title" name="post_title" required><br><br>
+
+            <label for="post_content">Post Content</label><br>
+            <textarea id="post_content" name="post_content" rows="5" required></textarea><br><br>
+
+            <label for="post_metadata">Metadata : mymeta</label><br>
+            <input type="text" id="post_metadata" name="post_metadata" required><br><br>
+
+            <button type="submit" name="submit_post_form">Create Post</button>
+        </form>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+// Enregistre le shortcode
+add_shortcode('simpli_custom_form', 'simpli_render_custom_form');
+
+// Submit form function
+function simpli_handle_form_submission() {
+    if (isset($_POST['submit_post_form'])) {
+        // Check that all fields are completed
+        $post_title   = isset($_POST['post_title']) ? sanitize_text_field($_POST['post_title']) : '';
+        $post_content = isset($_POST['post_content']) ? sanitize_textarea_field($_POST['post_content']) : '';
+        $post_metadata = isset($_POST['post_metadata']) ? sanitize_text_field($_POST['post_metadata']) : '';
+
+        if (!empty($post_title) && !empty($post_content) && !empty($post_metadata)) {
+            // Create a new post
+            $post_id = wp_insert_post([
+                'post_title'   => $post_title,
+                'post_content' => $post_content,
+                'post_status'  => 'publish',
+                'post_type'    => 'post',
+            ]);
+
+            if ($post_id && !is_wp_error($post_id)) {
+                // Add metadata to the post
+                add_post_meta($post_id, 'mymeta', $post_metadata, true);
+
+                // Success message
+                echo '<div class="alert alert-success">Post created successfully!</div>';
+            } else {
+                // Error message if the post creation fails
+                echo '<div class="alert alert-danger">Failed to create the post. Please try again.</div>';
+            }
+        } else {
+            // Error message if fields are empty
+            echo '<div class="alert alert-danger">Please fill out all fields before submitting.</div>';
+        }
+    }
+}
+add_action('wp', 'simpli_handle_form_submission'); // Avoid conflicts by using the wp hook
+
+
+// Add CSS from the theme
+function simpli_enqueue_custom_form_styles_from_theme() {
+    wp_enqueue_style('simpli-custom-form-styles', get_template_directory_uri() . '/style.css');
+}
+add_action('wp_enqueue_scripts', 'simpli_enqueue_custom_form_styles_from_theme');
