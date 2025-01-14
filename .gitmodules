@@ -1,0 +1,3 @@
+[submodule "wp-content/plugins/simpli-wp-test-interview"]
+	path = wp-content/plugins/simpli-wp-test-interview
+	url = https://github.com/Raion207/simpli-wp-test-interview
