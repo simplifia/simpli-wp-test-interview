@@ -1,4 +1,14 @@
 services:
+  db:
+    image: mysql:lts
+    container_name: wordpress_db
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
   wordpress:
     image: wordpress:latest
     container_name: wordpress
@@ -17,16 +27,6 @@ services:
       WORDPRESS_DEBUG_DISPLAY: 1
     volumes:
       - ./:/var/www/html/wp-content/plugins/simpli-wp-test-interview
-  db:
-    image: mysql:lts
-    container_name: wordpress_db
-    environment:
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-      MYSQL_ROOT_PASSWORD: root
-    volumes:
-      - db_data:/var/lib/mysql
 
 volumes:
   db_data:

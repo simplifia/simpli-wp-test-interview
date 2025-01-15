@@ -1,49 +1,51 @@
 # simpli-wp-test-interview
 
-### What is this repository for? ###
+Voici ma proposition d'implémentation du test technique proposé par Simplifia.
 
-This repository is for testing Wordpress skills of candidates who apply to a job at Simplifia.
+## Initialisation
+Pour plus de simplicité, j'ai ajouté docker afin de pouvoir tester aisément les modifications apportées. 
 
-### How do I get set up? ###
-
-Be sure to have a Wordpress last version installed on your machine  
+Une fois docker installé, il suffit de lancer : 
+```bash
+docker compose up -d
 ```
-Fork the project  
-Clone the repository  and install it as a plugin in your Wordpress
-cd /wp-content/plugins/simpli-wp-test-interview
-Create a new branch named *interview/yourfirstname-yourlastname* from master. Never commit or push into master!  
+
+à la racine du projet.
+![img.png](images/init.png)
+
+Si cette erreur apparait : 
+![img.png](images/dberror.png)
+
+C'est que le conteneur Wordpress a essayé de se connecter à la base de donnée avant que le container MySQL n'ai eu le temps de charger.
+Il suffit de faire : 
+```bash
+docker restart wordpress
 ```
-### Mission 1 ###
 
-Your mission is to create a new page.
-On this page, you will show a title and a form to create a post and its metadata.
-The goal is to submit the form and save in database a new post with name and content and a metadata witj key  'mymeta' and its value.
-See the mockup : https://github.com/simplifia/simpli-wp-test-interview/blob/main/mockup.PNG
+Pour résoudre le problème et arriver sur la célèbre installation en 5 minutes de Wordpress.
+![img.png](images/install.png)
 
-### Mission 2 ###
+Une fois connecté, il est nécessaire d'activer manuellement l'extension.
+![img.png](images/activate.png)
 
-Create a block Gutenberg. 
+## Mission 1
 
-```
-# If you have problems we use node v20.10.0 and npm 10.2.3
-cd /wp-content/plugins/simpli-wp-test-interview
-npm i
-cd src
-npx @wordpress/create-block@latest --no-plugin
-# choose dynamic
-cd /wp-content/plugins/simpli-wp-test-interview
-# Add register_block_type in simpli-wp-test-interview.php 
-npm run start
-```
-You mission is to create a basic Gutenberg Block, in the administration side 
-users can edit the text displayed in your block but by default it shows "Hello World".
+Une fois activée, un onglet apparait en dessous du "tableau de bord" dans le menu latéral. 
+Celui-ci permet d'ajouter un post : 
+![img.png](images/mission1.png)
+![img.png](images/mission1-added.png)
 
-In the front end when user click on your block, it reverse the text, "Hello World" become "dlroW olleH".
-This feature must be accessible.
+## Mission 2
 
-Bonus: in the administration users can change the background and the border of your block.
+En nous rendant sur le post nouvellement créé, nous pouvons ajouter le nouveau block "Mission Block" de manière classique.
+![img.png](images/mission2-1.png)
 
-### Contribution guidelines ###
-When you start working, please push an initial commit on a dedicated branch named with your own name and first name.  
-After that, please push at least one commit every 30 minutes.  
-When you are done, please create a Pull Request (https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
+Celui-ci affiche un texte avec une bordure. Le texte par défaut est Hello World mais peut-être modifié dans l'éditeur.
+De plus, le panneau de configuration permet de modifier la couleur du background ainsi que de la bordure.
+
+![img.png](images/mission2-2.png)
+![img.png](images/mission2-3.png)
+
+Une fois le post enregisté, nous pouvons l'afficher sur la partie front-end, où un click sur le block va inverser le texte.
+![img.png](images/mission2-4.png)
+![img.png](images/mission2-5.png)
