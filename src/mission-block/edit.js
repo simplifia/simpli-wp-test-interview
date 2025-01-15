@@ -1,7 +1,14 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls, RichText } from '@wordpress/block-editor';
-import { PanelBody, ColorPicker } from '@wordpress/components';
-import './editor.scss';
+import {
+	useBlockProps,
+	InspectorControls,
+	RichText
+} from '@wordpress/block-editor';
+import {
+	PanelBody,
+	ColorPicker
+} from '@wordpress/components';
+import './editor.scss'; // Styles de l'éditeur si tu veux
 
 export default function Edit({ attributes, setAttributes }) {
 	const { text, backgroundColor, borderColor } = attributes;
@@ -24,6 +31,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
+
 			<div
 				{...useBlockProps({
 					style: {

@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll(".wp-block-create-block-mission-block").forEach((e=>{e.addEventListener("click",(()=>{const t=e.querySelector("p");t&&(t.textContent=t.textContent.split("").reverse().join(""))}))}))}));
+document.addEventListener("DOMContentLoaded",(function(){document.querySelectorAll(".wp-block-create-block-mission-block.reverse-text-button").forEach((e=>{const t=e.querySelector(".block-text");e&&t&&e.addEventListener("click",(()=>{t.textContent=t.textContent.split("").reverse().join("")}))}))}));

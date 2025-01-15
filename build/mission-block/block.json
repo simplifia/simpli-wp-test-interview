@@ -6,7 +6,7 @@
   "title": "Mission Block",
   "category": "text",
   "icon": "smiley",
-  "description": "Mission block with text editing and dynamic styling.",
+  "description": "Un bloc affichant un texte réversible",
   "example": {},
   "supports": {
     "html": false

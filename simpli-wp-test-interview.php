@@ -8,7 +8,7 @@ Version: 1.1
 
 namespace SimpliCeremonyStreamingPlugin;
 
-use \SimpliCeremonyStreamingPlugin\Models\Singleton;
+use SimpliCeremonyStreamingPlugin\Models\Singleton;
 
 include_once plugin_dir_path(__FILE__) . '/Autoloader.php';
 include_once plugin_dir_path(__FILE__) . '/Models/Singleton.php';
@@ -22,27 +22,26 @@ class SimpliCeremonyStreamingPlugin extends Singleton
 
         new CeremonyStreamingPlugin();
 
-        add_action('init', function () {
-            register_block_type(plugin_dir_path(__FILE__) . 'build/mission-block/block.json', [
-                'render_callback' => 'render_mission_block',
-            ]);
-        });
+        add_action('init', [$this, 'register_mission_block']);
 
-        add_action('enqueue_block_assets', function () {
-            if (has_block('create-block/mission-block')) {
-                wp_enqueue_script(
-                    'create-block-mission-block-view-script',
-                    plugins_url('build/mission-block/view.js', __FILE__),
-                    ['wp-element'],
-                    filemtime(plugin_dir_path(__FILE__) . 'build/mission-block/view.js'),
-                    true
-                );
-            }
-        });
+        add_action('admin_menu', [$this, 'add_admin_menu_page']);
     }
 
     /**
-     * Ajouter une page d'administration
+     * Enregistrement du bloc "Mission Block".
+     */
+    public function register_mission_block()
+    {
+        register_block_type(
+            plugin_dir_path(__FILE__) . 'build/mission-block/block.json',
+            [
+                'render_callback' => 'render_mission_block',
+            ]
+        );
+    }
+
+    /**
+     * Ajouter la page d'administration
      */
     public function add_admin_menu_page()
     {
@@ -65,12 +64,11 @@ class SimpliCeremonyStreamingPlugin extends Singleton
         if (isset($_POST['simpli_test_create_post'])) {
             $this->process_form();
         }
-
         $this->render_template('admin-page', []);
     }
 
     /**
-     * Traiter le formulaire pour enregistrer un post
+     * Traiter le formulaire pour enregistrer un post et sa métadonnée
      */
     private function process_form()
     {
@@ -101,7 +99,7 @@ class SimpliCeremonyStreamingPlugin extends Singleton
     }
 
     /**
-     * Charger un template
+     * Charger un template depuis le répertoire 'templates'
      */
     private function render_template($template_name, $data = [])
     {
@@ -110,10 +108,11 @@ class SimpliCeremonyStreamingPlugin extends Singleton
             extract($data);
             include $template_file;
         } else {
-            echo '<div class="error notice"><p>Le template demandé n\'existe pas : ' . $template_name . '</p></div>';
+            echo '<div class="error notice"><p>Le template demandé n\'existe pas : ' . esc_html($template_name) . '</p></div>';
         }
     }
 }
 
 Autoloader::register();
+
 SimpliCeremonyStreamingPlugin::GetInstance();
