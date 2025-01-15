@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){document.querySelectorAll(".wp-block-create-block-mission-block.reverse-text-button").forEach((e=>{const t=e.querySelector(".block-text");e&&t&&e.addEventListener("click",(()=>{t.textContent=t.textContent.split("").reverse().join("")}))}))}));
