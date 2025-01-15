@@ -20,8 +20,11 @@
     "test:unit": "wp-scripts test-unit-js"
   },
   "dependencies": {
+    "@wordpress/block-editor": "^14.10.1",
+    "@wordpress/blocks": "^14.4.1",
     "@wordpress/components": "^25.16.0",
     "@wordpress/element": "^5.27.0",
+    "@wordpress/i18n": "^5.15.1",
     "@wordpress/server-side-render": "^4.27.1",
     "ajv": "^8.17.1",
     "ajv-keywords": "^5.1.0",

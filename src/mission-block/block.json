@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/mission-block",
+	"version": "0.1.0",
+	"title": "Mission Block",
+	"category": "text",
+	"icon": "smiley",
+	"description": "Un bloc affichant un texte réversible",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "mission-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Hello World"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#000000"
+		}
+	}
+}

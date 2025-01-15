@@ -1,0 +1,18 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-mission-block {
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.wp-block-create-block-mission-block:hover {
+	transform: scale(1.05);
+}
+

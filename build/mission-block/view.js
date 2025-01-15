@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll(".wp-block-create-block-mission-block").forEach((e=>{e.addEventListener("click",(()=>{const t=e.querySelector("p");t&&(t.textContent=t.textContent.split("").reverse().join(""))}))}))}));
